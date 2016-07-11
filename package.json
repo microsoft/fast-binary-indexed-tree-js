@@ -1,6 +1,6 @@
 {
   "name": "fast-binary-indexed-tree",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A JavaScript implementation of Binary Indexed Tree with fast initialization",
   "homepage": "https://github.com/lyweiwei/fast-binary-indexed-tree-js",
   "author": {
