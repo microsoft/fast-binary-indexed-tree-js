@@ -46,6 +46,14 @@
       "object-curly-spacing": [
         "error",
         "always"
+      ],
+      "no-return-assign": [
+        "error",
+        "except-parens"
+      ],
+      "max-nested-callbacks": [
+        "warn",
+        10
       ]
     }
   },

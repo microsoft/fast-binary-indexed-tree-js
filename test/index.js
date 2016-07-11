@@ -147,7 +147,7 @@ describe('BinaryIndexedTree', function () {
 
   describe('BIT with designated values', function () {
     const array = [1, 8, 6, 10, 7, 9, 0, 2, 6, 3];
-    const sumArray = (sum => array.map(value => sum += value))(0);
+    const sumArray = (sum => array.map(value => (sum += value)))(0);
     let bit = null;
 
     beforeEach(function () {
@@ -244,5 +244,4 @@ describe('BinaryIndexedTree', function () {
       });
     });
   });
-
 });
