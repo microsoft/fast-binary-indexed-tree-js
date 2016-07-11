@@ -146,13 +146,12 @@ describe('BinaryIndexedTree', function () {
   });
 
   describe('BIT with designated values', function () {
-    const defaultFrequency = 10;
     const array = [1, 8, 6, 10, 7, 9, 0, 2, 6, 3];
     const sumArray = (sum => array.map(value => sum += value))(0);
     let bit = null;
 
     beforeEach(function () {
-      bit = new BinaryIndexedTree({ defaultFrequency, maxVal: array.length });
+      bit = new BinaryIndexedTree({ maxVal: array.length });
       array.forEach((value, i) => bit.writeSingle(i, value));
     });
 
@@ -201,6 +200,46 @@ describe('BinaryIndexedTree', function () {
 
     describe('BinaryIndexedTree#lowerBound', function () {
       it('should find the lower-bound index', function () {
+        testLowerBound(bit, values);
+      });
+    });
+  });
+
+  describe('BIT with descending sequence', function () {
+    const array = [1, 8, -6, 10, 7, 9, 0, -2, 6, 3];
+    let bit = null;
+
+    beforeEach(function () {
+      bit = new BinaryIndexedTree({ maxVal: array.length });
+      array.forEach((value, i) => bit.writeSingle(i, value));
+    });
+
+    it('should have a correct _countNeg property', function () {
+      expect(bit._countNeg).to.equal(2);
+      bit.update(2, 6);
+      expect(bit._countNeg).to.equal(1);
+      bit.update(7, 3);
+      expect(bit._countNeg).to.equal(0);
+      bit.update(8, -7);
+      expect(bit._countNeg).to.equal(1);
+    });
+
+    const values = [-5, 0, 15, 25, 43, 53, 100];
+
+    describe('BinaryIndexedTree#upperBound', function () {
+      it('should valiate the non-descending', function () {
+        expect(() => bit.upperBound(20)).to.throw('Sequence is not non-descending');
+        bit.update(2, 12);
+        bit.update(7, 4);
+        testUpperBound(bit, values);
+      });
+    });
+
+    describe('BinaryIndexedTree#lowerBound', function () {
+      it('should valiate the non-descending', function () {
+        expect(() => bit.lowerBound(20)).to.throw('Sequence is not non-descending');
+        bit.update(2, 12);
+        bit.update(7, 4);
         testLowerBound(bit, values);
       });
     });
