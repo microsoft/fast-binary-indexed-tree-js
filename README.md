@@ -1,4 +1,4 @@
-# fast-binary-indexed-tree [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# [fast-binary-indexed-tree][github-repo] [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > A JavaScript implementation of Binary Indexed Tree with fast initialization
 
 Binary Indexed Tree also known as [Fenwick tree][wiki-fenwick-tree] is a data
@@ -59,6 +59,7 @@ console.log(bit.upperBound(55));
 MIT © [Wei Wei]()
 
 
+[github-repo]: https://github.com/lyweiwei/fast-binary-indexed-tree-js
 [npm-image]: https://badge.fury.io/js/fast-binary-indexed-tree.svg
 [npm-url]: https://npmjs.org/package/fast-binary-indexed-tree
 [travis-image]: https://travis-ci.org/lyweiwei/fast-binary-indexed-tree.svg?branch=master
