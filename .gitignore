@@ -38,3 +38,6 @@ jspm_packages
 
 # Build result
 dist
+
+# Generated documents
+docs

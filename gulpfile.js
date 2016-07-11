@@ -10,6 +10,7 @@ var coveralls = require('gulp-coveralls');
 var babel = require('gulp-babel');
 var del = require('del');
 var isparta = require('isparta');
+var jsdoc = require('gulp-jsdoc3');
 
 // Initialize the babel transpiler so ES2015 files gets compiled
 // when they're loaded
@@ -71,9 +72,17 @@ gulp.task('babel', ['clean'], function () {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('jsdoc', function () {
+  return gulp.src(['./lib/**/*.js', 'README.md'], { read: false })
+    .pipe(jsdoc({
+      plugins: ['plugins/markdown'],
+      opts: { destination: './docs' }
+    }));
+});
+
 gulp.task('clean', function () {
   return del('dist');
 });
 
-gulp.task('prepublish', ['nsp', 'babel']);
+gulp.task('prepublish', ['nsp', 'babel', 'jsdoc']);
 gulp.task('default', ['static', 'test', 'coveralls']);
