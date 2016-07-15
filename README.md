@@ -22,6 +22,9 @@ $ npm install --save fast-binary-indexed-tree
 ```
 
 ## Usage
+
+Refer to the [document][docs] for details.
+
 ```js
 var BinaryIndexedTree = require('fast-binary-indexed-tree');
 
@@ -65,6 +68,8 @@ or contact [opencode@microsoft.com][ms-mailto] with any additional questions or 
 [wiki-fenwick-tree]: https://en.wikipedia.org/wiki/Fenwick_tree
 [binary-indexed-tree]: https://www.topcoder.com/community/data-science/data-science-tutorials/binary-indexed-trees/
 [berlysia]: https://github.com/berlysia/binary-indexed-tree-js
+
+[docs]: https://microsoft.github.io/fast-binary-indexed-tree-js/
 
 [ms-code-of-conduct]: https://opensource.microsoft.com/codeofconduct/
 [ms-code-of-conduct-faq]: https://opensource.microsoft.com/codeofconduct/faq/
