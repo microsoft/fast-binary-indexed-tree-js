@@ -115,8 +115,6 @@ describe('BinaryIndexedTree', function () {
 
     describe('BinaryIndexedTree#read', function () {
       it('should validate the count', function () {
-        expect(() => bit.read(-1)).to.throw('Count out of range');
-        expect(() => bit.read(11)).to.throw('Count out of range');
         expect(() => bit.read('1')).to.throw('Invalid count');
         expect(() => bit.read(1.23)).to.throw('Invalid count');
         expect(() => bit.read(null)).to.throw('Invalid count');
