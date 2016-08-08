@@ -1,6 +1,6 @@
 {
   "name": "fast-binary-indexed-tree",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A JavaScript implementation of Binary Indexed Tree with fast initialization",
   "homepage": "https://github.com/Microsoft/fast-binary-indexed-tree-js",
   "author": {
@@ -8,6 +8,11 @@
     "email": "wewei@microsoft.com",
     "url": ""
   },
+  "contributors": [{
+    "name": "Wei Wei",
+    "email": "lyweiwei@outlook.com",
+    "url": ""
+  }],
   "files": [
     "dist",
     "docs"
