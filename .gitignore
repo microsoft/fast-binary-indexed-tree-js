@@ -41,3 +41,7 @@ dist
 
 # Generated documents
 docs
+
+# NPM config
+.npmrc
+
