@@ -1,6 +1,6 @@
 {
   "name": "fast-binary-indexed-tree",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A JavaScript implementation of Binary Indexed Tree with fast initialization",
   "homepage": "https://github.com/Microsoft/fast-binary-indexed-tree-js",
   "author": {
@@ -8,11 +8,13 @@
     "email": "wewei@microsoft.com",
     "url": ""
   },
-  "contributors": [{
-    "name": "Wei Wei",
-    "email": "lyweiwei@outlook.com",
-    "url": ""
-  }],
+  "contributors": [
+    {
+      "name": "Wei Wei",
+      "email": "lyweiwei@outlook.com",
+      "url": ""
+    }
+  ],
   "files": [
     "dist",
     "docs"
@@ -22,9 +24,8 @@
     ""
   ],
   "devDependencies": {
-    "babel-core": "^6.10.4",
+    "babel-core": "^6.25.0",
     "babel-eslint": "^4.1.8",
-    "babel-plugin-transform-es2015-modules-umd": "^6.8.0",
     "babel-preset-es2015": "^6.9.0",
     "chai": "^3.5.0",
     "del": "^2.0.2",
